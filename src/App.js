@@ -2,8 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import searchImgApi from './services/searchImg-api';
 import Searchbar from './Components/Searchbar/Searchbar';
-import Container from './Components/Container/Container';
-import './styles.css';
+import ImageGallery from './Components/ImageGallery/ImageGallery';
+import Button from './Components/Button/Button';
+import Loader from './Components/Loader/Loader';
+import Modal from './Components/Modal/Modal';
 
 function App() {
   const [images, setImages] = useState([]);

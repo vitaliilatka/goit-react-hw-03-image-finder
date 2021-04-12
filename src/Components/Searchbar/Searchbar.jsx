@@ -1,7 +1,6 @@
+import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-
-const ApiKey = https://pixabay.com/api/?q=что_искать&page=номер_страницы&key=20273026-5f41ec9ec9512e6f61de79333&image_type=photo&orientation=horizontal&per_page=12
 
 const SearchBar = ({ onSubmit }) => {
     const [query, setQuery] = useState('');

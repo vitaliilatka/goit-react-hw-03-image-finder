@@ -1,11 +1,17 @@
-const pixabayKey = '18755055-2b7ea91b0bc0758970d9c18f6';
+import React from 'react';
+import Spinner from 'react-loader-spinner';
+import styles from './Loader.module.css';
 
-const fetchImagesWithQuery = (searchQuery, page = 1) => {
+const Loader = () => {
+    return (
+        <Spinner
+            className={styles.spinner}
+            type="Oval"
+            color="#3f51b5"
+            height={50}
+            width={50}
+        />
+    );
+};
 
-    return fetch(`https://pixabay.com/api/?q=${searchQuery}&key=${pixabayKey}&page=${page}&image_type=photo&orientation=horizontal&per_page=12`)
-        .then(res => res.json())
-        .then(data => data.hits);
-
-}
-// eslint-disable-next-line
-export default { fetchImagesWithQuery };
+export default Loader;
