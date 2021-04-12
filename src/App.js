@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import searchImgApi from './services/searchImg-api';
 import Searchbar from './Components/Searchbar/Searchbar';
 import Container from './Components/Container/Container';
 import './styles.css';
@@ -47,9 +48,8 @@ function App() {
       .finally(() => setIsLoading(false));
   };
 
-  const openModal = e => {
-    if (e.target.nodeName !== 'IMG') return;
-    setLargeImgUrl(e.target.dataset.url);
+  const openModal = data => {
+    setLargeImgUrl(data);
   };
 
   const closeModal = () => {
@@ -61,7 +61,7 @@ function App() {
   return (
     <div className="App">
       <Searchbar onSubmit={onChangeQuery} />
-      {error && <h2>Ой, ошибка, все пропало (((</h2>}
+      {error && <h2>что-то пошло не так... видимо где-то ошибка</h2>}
       <ImageGallery images={images} onClick={openModal} />
       {isLoading && <Loader />}
       {shouldRenderLoadMoreBtn && <Button onClick={fetchArticles} />}
