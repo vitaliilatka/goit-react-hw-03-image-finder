@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import searchImgApi from './services/searchImg-api';
+import searchImgApi from './Services/searchImg-api';
 import Searchbar from './Components/Searchbar/Searchbar';
 import ImageGallery from './Components/ImageGallery/ImageGallery';
 import Button from './Components/Button/Button';
@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     if (!searchQuery) return;
-    fetchArticles();
+    fetchArticles()
   }, [searchQuery]);
 
   const onChangeQuery = query => {

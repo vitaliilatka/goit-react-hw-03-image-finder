@@ -1,4 +1,4 @@
-import ImageGalleryItem from '../ImageGalleryItem';
+import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import PropTypes from 'prop-types';
 
 const ImageGallery = ({ images, onClick }) => {

@@ -6,7 +6,7 @@ axios.defaults.baseURL = 'https://pixabay.com/api';
 const fetchImages = ({
     searchQuery = 'nature',
     currentPage = 1,
-    perPage = 15,
+    perPage = 12,
 }) => {
     return axios
         .get(
